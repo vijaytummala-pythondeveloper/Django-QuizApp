@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+<div class='container'>
+    <form  action="get_questions">
+        <input type="text" value="{{ res_obj.id }}" name="ques_id" hidden>
+        <div class="card gotocenter" style="width: 18rem;">
+            <img src="{% static 'images/quizimage.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">Welcome {{ user }} </h4>
+                <p class="card-text gotocenter">Select Category</p>
+                <input type="submit" class="btn btn-block btn-success" name="quiz_category" value="GeneralKnowledge"/>
+                <input type="submit" class="btn btn-block btn-success" name="quiz_category" value="Computers"/>
+                <input type="submit" class="btn btn-block btn-success" name="quiz_category" value="History"/>
+                <input type="submit" class="btn btn-block btn-success" name="quiz_category" value="Maths"/>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
